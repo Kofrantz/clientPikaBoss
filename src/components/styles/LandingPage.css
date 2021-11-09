@@ -62,6 +62,9 @@ body{
 .electric:hover{
     opacity: 100%;
 }
+.electric:active{
+    opacity: 100%;
+}
 .circles{
     position: absolute;
     width: 100%;

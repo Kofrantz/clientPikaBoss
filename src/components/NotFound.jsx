@@ -17,6 +17,6 @@ export function ReturnBtn(){
     const history = useHistory() 
     return(
         <button className='volver'
-        onClick={() => {history.push('/home')}}>⮌Regresar</button>
+        onClick={() => {history.push('/home')}}>🡸Regresar</button>
     )
 }

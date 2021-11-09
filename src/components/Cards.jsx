@@ -74,12 +74,9 @@ export default function Cards(){
     )
 }
 function LoadCircle(){
-    const {pokemons} = useSelector((state) => state)
-    const dispatch = useDispatch()
     return(
         <div className='loadCircleContainer'>
             <div className='loadCircle'></div>
-            {setTimeout(() => {<button onClick={() => {dispatch(upTot(pokemons.length))}}>cancelar</button>}, 10000)}
         </div>
     )
 }
