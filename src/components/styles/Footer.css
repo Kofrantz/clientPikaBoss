@@ -1,0 +1,50 @@
+.footer{
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    background-color: #1d1d1d;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+.inLogo{
+    width: 30px;
+    border-radius: 5px;
+}
+.redes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+}
+.redes a{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.redesTitle{
+    margin: 5px;
+    font-weight: bold;
+}
+.routes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.routes a{
+    margin: 5px;
+    width: 80px;
+    height: 25px;
+    background-color: transparent;
+    text-align: center;
+    transition: 0.2s;
+}
+.routes a:hover{
+    background-color: rgb(56,56,56);
+}
+.routesTitle{
+    margin: 5px;
+    font-weight: bold;
+    width: 80px;
+    text-align: center;
+}

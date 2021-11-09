@@ -1,0 +1,105 @@
+
+.Details h1{
+    text-align: center;
+    font-size: 42px;
+}
+.detAndImgContainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: rgb(56, 56, 56);
+    border: 5px solid rgba(103, 106, 255, 0.603);
+    filter: url(#blue-glow);
+}
+.primaryImg{
+    width: 95%;
+    /* height: 500px; */
+    object-fit: cover;
+    border-radius: 20px;
+}
+.detContainer{
+    font-size: 24px;
+    width: 100%;
+}
+.stat{
+    height:20px;
+    animation: bars 3s linear;
+    background-color: rgba(103, 106, 255, 0.603);
+    filter: url(#blue-glow);
+}
+@keyframes bars{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+.bgStat{
+    position:relative;
+    height:20px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.829);
+}
+.statBar{
+    margin: 10px 0;
+    width: 100%;
+}
+.statBars{
+    width: 100%;
+}
+.extraStats{
+    margin: 30px 0;
+}
+.detTypesContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+.detType{
+    margin: 10px;
+}
+.detType p{
+    margin: 0;
+    text-align: center;
+}
+.detTypeImg{
+    width: 100px;
+    height: 100px;
+}
+.deleteBtn{
+    justify-self: center;
+    margin: 10px;
+    width: 90%;
+    height: 30px;
+    font-size: 20px;
+    border-radius:20px;
+    border: none;
+    background-color:rgba(255, 0, 0, 0.342);
+    color: white;
+    transition: 0.2s;
+}
+.deleteBtn:hover{
+    background-color:rgba(255, 0, 0, 0.753);
+}
+@media only screen and (max-width: 775px) {
+    .primaryImg{
+        width: 100%;
+    }
+    .detAndImgContainer{
+        grid-template-columns: 100%;
+        margin: 50px 10px;
+    }
+}
+@media only screen and (min-width: 775px) {
+    .Details h1{
+        position: absolute;
+        margin: 20px 0;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+    }
+}

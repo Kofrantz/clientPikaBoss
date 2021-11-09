@@ -1,0 +1,19 @@
+# Hacer tests 
+# Filtro my pokemons
+# About me
+# no se repita la invitacion a aboutme
+# terminar landing page
+# terminar ruta de creacion
+- animacion de creacion (opcional)
+# terminar home
+# terminar ruta de detalles
+- cambiar pantalla de carga
+# not found
+# PUSHEAR ALGO
+# Footer
+X bug a veces la imagen no aparece cuando la traigo de la bdd
+# delete pokemon
+# boton return se rompe en home
+# Aclarar pagina donde estamos
+# no detecta nombre duplicado
+# crear con url img

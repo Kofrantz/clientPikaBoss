@@ -1,0 +1,169 @@
+body{
+    background-color: rgb(44, 44, 44);
+    color: white; 
+}
+.bgGrad{
+    background: linear-gradient(rgb(44, 44, 44) 40%, rgb(0, 0, 0));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+}
+.bg{
+    position: absolute;
+    width: 450px;
+    margin: 100px 200px;
+    -webkit-box-reflect: below -5px linear-gradient(transparent 70%, rgba(0, 0, 0, 0.137));
+    filter: url(#white-glow-animated)
+}
+.pikaBossSvg{
+    width: 90px;
+    margin: 10px;
+    filter: url(#white-glow)
+}
+.titleLp{
+    position: absolute;
+    left: 110px;
+    color: rgb(255, 255, 255);
+    filter: url(#white-glow)
+}
+.infoDiv{
+    margin: 60px;
+    color: white;
+    width: 300px;
+}
+.infoDivP{
+    font-size: 24px;
+}
+.btnEmpezar{
+    width: 100%;
+    height: 70px;
+    font-size: 24px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background: transparent;
+    color: white;
+    transition: 0.2s;
+    filter: url(#white-glow)
+}
+
+.electric{
+    position: absolute;
+    height: 70px;
+    width: 300px;
+    opacity: 0%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: 0.1s;
+    transform: translateY(-70px);
+}
+.electric:hover{
+    opacity: 100%;
+}
+.circles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: url(#white-glow);
+}
+.cir{
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid white;
+    filter: url(#turbulence) url(#white-glow);
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 100%;
+    transform: scale(0.9);
+    /* animation: turb 0.2s linear infinite; */
+}
+.cir2{
+    filter: url(#turbulence2) url(#white-glow);
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 80%;
+    transform: scale(0.8) translateY(5px);
+    /* animation: turb 0.2s linear infinite; */
+}
+.ray{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    height: 500px;
+    width: 500px;
+    margin: 50px 150px;
+    filter: url(#turbulence) url(#white-glow);
+    z-index: -1;
+}
+
+.ray2{
+    border: 6px solid white;
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+    border-radius: 50%;
+    height: 100%;
+    width: 40%;
+    filter: url(#turbulence2) url(#white-glow);
+    animation: spin 0.2s linear infinite;
+}
+.space{
+    height: 500px;
+    width: 500px;
+    background-color: transparent;
+    margin: 0 0 0 150px; 
+}
+.infoDivContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.bgBlack{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:-5;
+}
+
+@media only screen and (max-width: 775px) {
+    .bgGrad{
+        width: 100%;
+    }
+    .infoDivContainer{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: space-evenly;
+    }
+    .bg{
+        width: 225px;
+        margin: 400px 90px;
+    }
+    .ray{
+        height: 250px;
+        width: 250px;
+        margin: 360px 60px;
+    }
+    .space{
+        display: none;
+    }
+    .bgBlack{
+        display: none;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(1deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,19 @@
+.notfound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.volver{
+    margin: 10px;
+    width: 20%;
+    height: 40px;
+    font-size: 24px;
+    border-radius:20px;
+    border: none;
+    background-color:rgb(93, 93, 93);
+    color: white;
+}
+.volver:hover{
+    filter: url(#blue-glow);
+}
