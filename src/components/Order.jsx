@@ -22,7 +22,7 @@ export default function Order(){
                 <option value="Mas defensivo">Defense</option>
                 <option value="Mas rapido">Speed</option>
             </select>
-            <button name="Dir" onClick={handleChange} className={order.dir?'mayorMenor':'menorMayor'}>🠉🠋</button>
+            <button name="Dir" onClick={handleChange} className={order.dir?'mayorMenor':'menorMayor'}>⬆ ⬇</button>
         </div>
         </>
     )
