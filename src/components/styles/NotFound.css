@@ -13,6 +13,7 @@
     border: none;
     background-color:rgb(93, 93, 93);
     color: white;
+    cursor: pointer;
 }
 .volver:hover{
     filter: url(#blue-glow);

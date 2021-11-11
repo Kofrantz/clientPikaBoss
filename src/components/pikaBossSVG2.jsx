@@ -19,7 +19,7 @@ export default function PikaBossSvg2(props) {
     return (
         <div id="aboutInv" >
             <div id="dialog" style={aboutInv ? {bottom: '0'} : {bottom: '-300px'}}>
-                <p>¿Would you like to meet the creator of this page?</p>
+                <p>Would you like to meet the creator of this page?</p>
                 <div className='dialogBtns' style={aboutInv ? {bottom: '0'} : {bottom: '-300px'}}>
                     <button className='dialogBtn' onClick={handleClick} value={true}>Yes</button>
                     <button className='dialogBtn' onClick={handleClick} value={false}>Later</button>

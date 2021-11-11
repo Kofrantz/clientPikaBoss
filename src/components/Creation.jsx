@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router";
-import { createPokemon } from "../reducer/actions";
+import { createPokemon, getTypes } from "../reducer/actions";
 import { ReturnBtn } from "./NotFound";
 import './styles/Creation.css'
 
@@ -23,7 +23,10 @@ export default function Creation (){
     const [typeState, setTypeState] = useState([])
     const [ preview, setPreview] = useState()
 
-    useEffect(() => {window.scrollTo(0, 0);}, [])
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        if(!types.length) dispatch(getTypes())
+    }, [])
 
     useEffect(() => {
         if (!input.image && !input.urlImage) {

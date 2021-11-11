@@ -52,10 +52,12 @@ a{
 }
 .page.btn:hover{
     filter: url(#blue-glow);
-    transform: scale(1.1)
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .page.disabled{
     opacity: 50%;
+    cursor: default;
 }
 .loadMore{
     width: 50%;
@@ -64,6 +66,7 @@ a{
     border-radius: 15px;
     margin: 0 auto 30px;
     background-color: rgba(124, 124, 124, 0.609);
+    cursor: pointer;
 }
 .loadMore:hover{
     filter: url(#blue-glow);

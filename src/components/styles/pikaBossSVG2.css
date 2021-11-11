@@ -46,6 +46,7 @@
     margin: 0 15px;
     padding: 5px;
     z-index: 1000;
+    cursor: pointer;
 }
 .dialogBtn:hover{
     background-color:rgb(59, 59, 255);

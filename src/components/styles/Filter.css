@@ -48,3 +48,6 @@ select{
     height: 30px;
     align-items: center;
 }
+.check{
+    cursor: pointer;
+}
