@@ -34,15 +34,6 @@
     width: 50%;
     font-size: 20px;
 }
-@media only screen and (min-width: 775px) {
-    .aboutTitle{
-        position: absolute;
-        margin: 20px 0;
-        width: 100%;
-        top: 0;
-        z-index: -1;
-    }
-}
 @media only screen and (max-width: 775px) {
     .svgPikaAbout svg{
         position: fixed;
@@ -58,5 +49,17 @@
         margin: 10px;
         width: 100%;
         font-size: 20px;
+    }
+    .brickwall{
+        display: none;
+    }
+}
+@media only screen and (min-width: 775px) {
+    .aboutTitle{
+        position: absolute;
+        margin: 20px 0;
+        width: 100%;
+        top: 0;
+        z-index: -1;
     }
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useHistory } from "react-router"
 import { getDetails, clearDetails, getPokemonByName, deletePokemon } from "../reducer/actions"
@@ -40,28 +40,28 @@ export default function Details(props){
                     <div className="statBars">
                         <div className="statBar">❤️ HP: {d.hp}
                             <div className='bgStat'>
-                                <div className='stat' style={{maxWidth: `${Math.round(100/maxStats.hp*d.hp)}%`}}></div>
+                                <div className='stat' style={{maxWidth: `${Math.round(100/300*d.hp)}%`}}></div>
                             </div>
                         </div>
-                        <div className="statBar">⚔️ Ataque: {d.attack}
+                        <div className="statBar">⚔️ Attack: {d.attack}
                             <div className='bgStat'>
-                                <div className='stat' style={{maxWidth: `${Math.round(100/maxStats.attack*d.attack)}%`}}></div>
+                                <div className='stat' style={{maxWidth: `${Math.round(100/300*d.attack)}%`}}></div>
                             </div>
                         </div>
-                        <div className="statBar">🛡️ Defensa: {d.defense}
+                        <div className="statBar">🛡️ Defense: {d.defense}
                             <div className='bgStat'>
-                                <div className='stat' style={{maxWidth: `${Math.round(100/maxStats.defense*d.defense)}%`}}></div>
+                                <div className='stat' style={{maxWidth: `${Math.round(100/300*d.defense)}%`}}></div>
                             </div>
                         </div>
-                        <div className="statBar">⚡ Velocidad: {d.speed}
+                        <div className="statBar">⚡ Speed: {d.speed}
                             <div className='bgStat'>
-                                <div className='stat' style={{maxWidth: `${Math.round(100/maxStats.speed*d.speed)}%`}}></div>
+                                <div className='stat' style={{maxWidth: `${Math.round(100/300*d.speed)}%`}}></div>
                             </div>
                         </div>
                     </div>
                     <div className='extraStats'>
-                        <div>📏 Altura: {d.height}</div>
-                        <div>⚖️ Peso: {d.weight}</div>
+                        <div>📏 Height: {d.height}</div>
+                        <div>⚖️ Weight: {d.weight}</div>
                         <div>ID: {d.id}</div>
                     </div>
                     <div className='detTypesContainer'>
@@ -75,7 +75,7 @@ export default function Details(props){
                         })}
                     </div>
                 </div>
-                {d.origin === 'My' && <button className='deleteBtn' onClick={handleDelete}>Eliminar Pokemon</button>}
+                {d.origin === 'My' && <button className='deleteBtn' onClick={handleDelete}>Delete Pokemon</button>}
             </div>
             <svg style={{position: 'absolute', height: 0, width: 0}}>
                 <filter id="blue-glow">

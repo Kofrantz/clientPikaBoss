@@ -2,8 +2,12 @@ import './styles/About.css'
 import Footer from './Footer'
 import { ReturnBtn } from './NotFound'
 import brickwall from '../multimedia/brickWall.jpg'
+import { useEffect } from 'react'
 
 export default function About(props){
+    
+    useEffect(() => {window.scrollTo(0, 0);}, [])
+
     return(<div className="About">
         <img className="brickwall" src={brickwall}/>
         <ReturnBtn/>
@@ -152,9 +156,9 @@ export default function About(props){
             </div>
             <div className="circleShadow2"></div>
             <div className='textContainer'>
-                <p>¡Hola! Me llamo Franco Alfano, y estoy estudiando desarrollo web. Este sitio web es un proyecto individual, parte de los estudios que estoy cursando, donde pongo en práctica todos los conocimientos adquiridos en estos últimos meses. </p>
-                <p>Para la construcción de “PikaBoss” use tecnologías como React, Express, Sequelize y PostgresSql. Los lenguajes utilizados fueron Javascript, HTML, CSS. La decoración del sitio fue desarrollada sin usar librerías, por lo que todo es CSS puro. En cuanto a las imágenes de PikaBoss están desarrolladas en Adobe Illustrator, algunas están convertidas a formato “.png” pero otras son un componente de React con un SVG dentro.</p>
-                <p>El sitio cuenta con “responsive design” por lo que se ajusta al dispositivo en el que se esté usando.</p>
+                <p>Hello! My name is Franco Bigongiari, and I am studying web development. This website is an individual project, part of the studies I am studying, where I put into practice all the knowledge acquired in recent months.</p>
+                <p>For the construction of "PikaBoss" we use technologies such as React, Express, Sequelize and PostgresSql. The languages used were Javascript, HTML, CSS. The decoration of the site was developed without using libraries, so everything is pure CSS. As for the PikaBoss images, they are developed in Adobe Illustrator, some are converted to “.png” format but others are a React component with an SVG inside.</p>
+                <p>The site has a "responsive design" so it adjusts to the device on which it is being used.</p>
             </div>
         </div>
         <Footer/>

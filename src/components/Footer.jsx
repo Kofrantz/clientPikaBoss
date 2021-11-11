@@ -6,7 +6,7 @@ export default function Footer(){
         <div className="footer">
             <div className="redes">
                 <span className="redesTitle">Contact Me</span>
-                <a href='https://www.linkedin.com/in/franco-alfano-4a6a7b216/'>
+                <a target="_blank" href='https://www.linkedin.com/in/franco-alfano-4a6a7b216/'>
                     <img alt='' className='inLogo' src="Logos/LinkedIn.png"/>
                 </a>
             </div>

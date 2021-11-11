@@ -7,7 +7,6 @@ import Order from './Order';
 import NotFound from './NotFound';
 import './styles/Cards.css';
 import { CreateBtn, SearchBar } from './Nav';
-import { useEffect, useState } from 'react';
 
 export default function Cards(){
     const {pokemons,page,order,types,filters,menu, tot} = useSelector((state) => state)
@@ -46,7 +45,7 @@ export default function Cards(){
 
                 <div className='cards'>
                     {menu && <div className="blurScreen" onClick={() =>{dispatch(toogleMenu(false))}}></div>}
-                    {!pokeGroup.length ? <NotFound ret={false}/> : pokeGroup.map(p => 
+                    {!pokeGroup.length ? <NotFound ret={false} suggest={true}/> : pokeGroup.map(p => 
                         <NavLink to={`/home/${p.id}`} key={p.id}>
                             <div className='card'>
                                 <span className='name'>{capitalize(p.name)}</span>
@@ -68,7 +67,7 @@ export default function Cards(){
                 
                 {!pokeGroup.length ? null : <Paginado handlepage={handlePage} page={page} filtered={filtered}/>}
                 
-                {pokemons.length === tot ? <button className='loadMore' onClick={handleMore}>Cargar Mas...</button> : <LoadCircle/>}
+                {pokemons.length === tot ? <button className='loadMore' onClick={handleMore}>Load more...</button> : <LoadCircle/>}
             </div>
         </div>
     )
@@ -84,6 +83,7 @@ function LoadCircle(){
 function Paginado({handlepage, page, filtered}){
     const limit = 5
     const totPages = Math.ceil(filtered.length/12)
+    if(totPages===1) return(null)
     const buttons = []
     for (let i = -(limit-1)/2; i <= (limit-1)/2; i++){
         if(page+i <= totPages && page+i > 0) buttons.push(page+i)
@@ -100,7 +100,7 @@ function Paginado({handlepage, page, filtered}){
                 onClick={() => {handlepage(p)}}>{p}</button>)}
             {totPages-1 > buttons[buttons.length-1] && <div className='page disabled'>...</div>}
             {!buttons.find(x=>x===totPages) && <button className='page btn' onClick={() => {handlepage(totPages)}}>{totPages}</button>}
-            {page < totPages && <button className='page btn' onClick={() => {handlepage(page-1)}}>{'>'}</button>}
+            {page < totPages && <button className='page btn' onClick={() => {handlepage(page+1)}}>{'>'}</button>}
         </div>
     </>)
 }
@@ -134,14 +134,6 @@ function filterMachine(filters, pokemons){
     })
     if(filters.originFilter !== 'All') pokeGroup = pokeGroup.filter(x => x.origin === filters.originFilter)
     return pokeGroup
-}
-
-function newOrdArray(n){
-    let arr = []
-    for(var i = 1; i <= n; i++){
-        arr.push(i)
-    }
-    return arr
 }
 
 const capitalize = (str) => str[0].toUpperCase()+str.slice(1) 

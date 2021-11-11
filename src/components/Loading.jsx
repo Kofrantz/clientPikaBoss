@@ -3,7 +3,7 @@ import './styles/Loading.css'
 export default function Loading(){
     return(
         <>
-            <p className="loading">Cargando...</p>
+            <p className="loading">Loading...</p>
             <div className="base">
                 <div className="mitad1"></div>
                 <div className="mitad2"></div>

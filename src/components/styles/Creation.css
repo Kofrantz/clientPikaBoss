@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .creationForm h2{
     padding: 20px;
@@ -74,9 +75,14 @@
 .inputSkills{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    align-items: flex-end;
+    padding: 15px;
 }
-.inputSkills input{
+.inputSkills h2{
+    align-self: start;
+}
+.inputSkills input[type='number']{
+    text-align: center;
     margin: 10px;
     background-color: transparent;
     border-style: solid;
@@ -84,9 +90,50 @@
     outline: none;
     color: #fff;
     font-size: 15px;
+    width: 30%;
+}
+.inputSkills input[type='text']{
+    margin: 10px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0 0 3px 0;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    width: 90%;
+}
+.inputSkills label{
+    color:rgb(161, 161, 161);
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
 }
 .inputSkills input:focus{
     filter: url(#blue-glow);
+}
+.slidecontainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.slider{
+    -webkit-appearance: none;
+    height: 5px;
+    border-radius: 3px;
+    border: rgb(62, 66, 121);
+    width: 90%;
+}
+.slider::-webkit-slider-thumb:active{
+    filter: url(#blue-glow);
+}
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-image: url('../../multimedia/pokeball.png')
+    /* background-color: rgb(72, 127, 255); */
 }
 .inputTypes{
     padding: 20px;
@@ -127,9 +174,25 @@
     }
     .inputSkills{
         width: 100%;
+        font-size: 24px;
+    }
+    .inputSkills input[type='text']{
+        font-size: 24px;
+    }
+    .slider{
+        margin-bottom: 15px;
+    }
+    .inputSkills input[type='number']{
+        font-size: 24px;
+        width: 20%;
     }
     .inputImg{
         display: flex;
+        width: 100%;
+    }
+    .inputImg label{
+        margin: 0 20px;
+        font-size: 20px;
     }
     .inputImg img{
         justify-self: center;
@@ -144,9 +207,22 @@
     h2{
         margin: 0;
     }
+    .typeSel{
+        font-size: 20px;
+    }
     .typeSel button{
         width: 40px;
         height: 40px;
+    }
+    .inputTypes h2{
+        font-size: 36px;
+    }
+    .inputTypes label{
+        font-size: 20px;
+        margin: 20px;
+    }
+    .inputTypes select{
+        font-size: 20px;
     }
     .volver{
         width: 50%;
@@ -156,5 +232,8 @@
         border: none;
         background-color:rgb(93, 93, 93);
         color: white;
+    }
+    .CreateFinishBtn{
+        font-size: 36px;
     }
 }

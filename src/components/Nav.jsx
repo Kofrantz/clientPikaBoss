@@ -2,8 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from 'react-router'
 import { Link } from "react-router-dom";
-import { getPokemonByName, toogleMenu } from "../reducer/actions";
-import PikaBossSvg from './pikaBossSVG';
+import { toogleMenu } from "../reducer/actions";
 import pikaBossLogo from '../multimedia/pikaboss.png'
 import './styles/Nav.css';
 
@@ -68,11 +67,11 @@ export function SearchBar(props){
     }
     return (
         <form className={'searchBar '+props.class} onSubmit={handleSubmit}>
-            {props.class === 'movil' && <h3>Buscar</h3> }
-            <input type='text' placeholder='Buscar Pokemon...'
+            {props.class === 'movil' && <h3>Search</h3> }
+            <input type='text' placeholder='Search Pokemon...'
             value={input} onChange={handleChange}
             data-testid='searchBar'/>
-            <button type='submit' className='searchBtn'>Buscar</button>
+            <button type='submit' className='searchBtn'>Search</button>
         </form>
     )
 }
@@ -81,7 +80,7 @@ export function CreateBtn(props){
     return (
         <div className={'create '+props.class}>
             <Link exact to='/create'>
-                <button onClick={()=>{dispatch(toogleMenu(false))}} className='createBtn'><p id='txtCrear'>+ Crear Pokemon</p></button>
+                <button onClick={()=>{dispatch(toogleMenu(false))}} className='createBtn'><p id='txtCrear'>+ Create Pokemon</p></button>
             </Link>
         </div>
     )

@@ -31,31 +31,31 @@ export default function Filter(){
     return(
 
         <div className="filters">
-            <h3>Filtrar</h3>
-            <label>
+            <h3 style={{userSelect: 'none'}}>Filter</h3>
+            <label style={{userSelect: 'none'}}>
                 <input type="checkbox"
                 className="check"
                 value='My'
                 checked={originFilter === 'My'}
                 onChange={handleOriginChange}/>
-                Solo Mis Pokemons
+                Only my Pokemons
             </label>
-            <label>
+            <label style={{userSelect: 'none'}}>
                 <input type="checkbox"
                 className="check"
                 value='Original'
                 checked={originFilter === 'Original'}
                 onChange={handleOriginChange}/>
-                Solo los Originales
+                Only Originals
             </label>
             <div className="filtrarTipo">
-                <label htmlFor='filtrarTipo'>Tipo </label>
+                <label style={{userSelect: 'none'}} htmlFor='filtrarTipo'>Type </label>
                 <select name='filtrarTipo' value={'-Tipo-'} onChange={handleTypesChange}>
-                    <option value='-Tipo-' disabled>-Tipo-</option>
-                    {types.map(t => !typeFilter.find(x => x === t) ? <option key={t} value={t}>{t}</option> : null)}
+                    <option value='-Tipo-' disabled>-Type-</option>
+                    {types.map(t => !typeFilter.find(x => x === t) ? <option key={t} value={t}>{capitalize(t)}</option> : null)}
                 </select>
                 {typeFilter.length ? <button className='delAll' value='delAll' 
-                onClick={handleTypesChange}>🗑️Todos</button> : null}
+                onClick={handleTypesChange}>🗑️All</button> : null}
             </div>
             <div className="typeFilList">
                 {typeFilter.map(t => 

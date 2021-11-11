@@ -20,11 +20,11 @@ export default function LandingPage(){
             <div className='infoDivContainer'>
                 <div className='space'></div>
                 <div className="infoDiv">
-                    <p className='infoDivP'>Busca información de tus Pokemons favoritos o crea nuevos Pokemons</p>
+                    <p className='infoDivP'>Find information about your favorite Pokemons and create new ones!</p>
                     <NavLink exact to='/home'>
                         <button data-testid='empezar' className='btnEmpezar' 
                         OnClick={() => dispatch(getPokemons())}>
-                            Empezar
+                            START
                         </button>  
                         <div className='electric'>
                             <svg width="200" height="50" xmlns="http://www.w3.org/2000/svg">
