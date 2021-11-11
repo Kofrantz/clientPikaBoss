@@ -16,6 +16,14 @@
     "thunk": "^0.0.1",
     "web-vitals": "^0.2.4"
   },
+  "engines":{
+      "name": "myapp",
+      "description": "a really cool app",
+      "version": "1.0.0",
+      "engines": {
+        "node": "14.x"
+      }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
