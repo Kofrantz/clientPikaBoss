@@ -1,0 +1,19 @@
+.mayorMenor{
+    margin: 0 10px;
+    border-radius:5px;
+    border: none;
+    background-color:rgb(93, 93, 93);
+    outline: none;
+    color: white;
+    transition: 0.3s;
+}
+.menorMayor{
+    margin: 0 10px;
+    border-radius:5px;
+    border: none;
+    background-color:rgb(93, 93, 93);
+    outline: none;
+    color: white;
+    transition: 0.3s;
+    transform: rotateY(180deg);
+}

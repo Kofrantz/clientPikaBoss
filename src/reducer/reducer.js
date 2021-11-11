@@ -19,7 +19,7 @@ const initialState = {
     types: [],
     page: 1,
     filters: {typeFilter: [], originFilter: 'All'},
-    order: 'A - Z',
+    order: {name:'A - Z', dir:true},
     aboutMsg: true, 
     menu: false,
     tot: 0

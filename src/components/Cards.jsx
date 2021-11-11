@@ -105,22 +105,26 @@ function Paginado({handlepage, page, filtered}){
     </>)
 }
 
-function orderMachine(order, pokemons, types){
-    switch(order){
+function orderMachine(order, pokemons){
+    switch(order.name){
         case 'A - Z': 
-        return pokemons.sort((a,b) => a.name.localeCompare(b.name))
+        return order.dir ? pokemons.sort((a,b) => a.name.localeCompare(b.name)) 
+        : pokemons.sort((a,b) => b.name.localeCompare(a.name))
 
-        case 'Z - A': 
-        return pokemons.sort((a,b) => b.name.localeCompare(a.name))
+        /* case 'Z - A': 
+        return pokemons.sort((a,b) => b.name.localeCompare(a.name)) */
 
         case 'Mas fuerte': 
-        return pokemons.sort((a,b) => b.attack-a.attack)
+        return order.dir ? pokemons.sort((a,b) => b.attack-a.attack) :
+        pokemons.sort((b,a) => b.attack-a.attack)
 
         case 'Mas defensivo': 
-        return pokemons.sort((a,b) => b.defense-a.defense)
+        return order.dir ? pokemons.sort((a,b) => b.defense-a.defense)
+        : pokemons.sort((b,a) => b.defense-a.defense)
         
         case 'Mas rapido': 
-        return pokemons.sort((a,b) => b.speed-a.speed)
+        return order.dir ? pokemons.sort((a,b) => b.speed-a.speed)
+        : pokemons.sort((b,a) => b.speed-a.speed)
         
         default: return pokemons
     }

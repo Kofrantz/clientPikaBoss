@@ -17,14 +17,14 @@ export const DELETE_POKEMON = 'DELETE_POKEMON'
 
 /* export function getPokemons(){
     return async function (dispatch) {
-        const data = await axios.get('https://apipikaboss.herokuapp.com/pokemons')
+        const data = await axios.get('http://localhost:3001/pokemons')
         dispatch({type: GET_POKEMONS, payload: data})   
     }
 } */
 
 export function getPokemons(packs=1){
     return function (dispatch) {
-        return fetch('https://apipikaboss.herokuapp.com/pokemons?packs='+packs)
+        return fetch('http://localhost:3001/pokemons?packs='+packs)
         .then(r => r.json())
         .then(json => {
             if(packs>1) {
@@ -39,7 +39,7 @@ export function getPokemons(packs=1){
 
 export function getDetails(id){
     return async (dispatch) => {
-        const data = await axios.get(`https://apipikaboss.herokuapp.com/pokemons/${id}`)
+        const data = await axios.get(`http://localhost:3001/pokemons/${id}`)
         dispatch({type: GET_DETAILS, payload: data.data})
     } 
 }
@@ -52,7 +52,7 @@ export function clearDetails(){
 
 export function getPokemonByName(name){
     return (dispatch) => {
-        axios.get(`https://apipikaboss.herokuapp.com/pokemons?name=${name}`)
+        axios.get(`http://localhost:3001/pokemons?name=${name}`)
         .then(data => {
             dispatch({type: GET_POKEMON_BY_NAME, payload: data.data})
         })
@@ -65,7 +65,7 @@ export function getPokemonByName(name){
 
 export function getTypes(){
     return async (dispatch) => {
-        const data = await axios.get('https://apipikaboss.herokuapp.com/types')
+        const data = await axios.get('http://localhost:3001/types')
         dispatch({type: GET_TYPES, payload: data.data})
     }
 }
@@ -90,7 +90,7 @@ export function changeOrder(order){
 
 export function createPokemon(details, history){
     return (dispatch) => {
-        axios.post('https://apipikaboss.herokuapp.com/pokemons', details)
+        axios.post('http://localhost:3001/pokemons', details)
         .then(r => {
             if(r.data.error) return alert('Error: '+ r.data.error)
             dispatch({type: TOT, payload: 1})
@@ -111,7 +111,7 @@ export function toogleMenu(bool = '!'){
 }
 export function deletePokemon(id){
     return async (dispatch) => {
-        const data = await axios.delete(`https://apipikaboss.herokuapp.com/pokemons/${id}`)
+        const data = await axios.delete(`http://localhost:3001/pokemons/${id}`)
         dispatch({type: TOT, payload: -1})
         dispatch({type: DELETE_POKEMON, payload: data.data})
     }
